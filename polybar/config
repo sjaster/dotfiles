@@ -46,7 +46,7 @@ font-1 = Robot:pixelsize=10;1
 
 modules-left = i3 backlight volume 
 modules-center = xwindow 
-modules-right = xkeyboard pkg mail wlan battery date
+modules-right = xkeyboard pkg mailifsr wlan battery date
 
 tray-position = right
 tray-padding = 2
@@ -314,12 +314,12 @@ label = "%output:0:30%"
 exec = .config/polybar/pkg.sh
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
-[module/mail]
+[module/mailifsr]
 type = custom/script
 interval = 5
 format =   <label>
 format-underline = ${colors.primary}
-exec = .config/polybar/mail
+exec = .config/polybar/mail_fsr
 
 [settings]
 screenchange-reload = true

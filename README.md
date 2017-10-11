@@ -1,1 +1,1 @@
-This repository hosts my dotfiles. Feel free to take a loo around!
+This repository hosts some of my dotfiles. Feel free to take a look around!

@@ -190,7 +190,7 @@ ramp-coreload-1 = %{F#76FF03}▂
 ramp-coreload-2 = %{F#76FF03}▃
 ramp-coreload-3 = %{F#FF6F00}▄
 ramp-coreload-4 = %{F#FF6F00}▅
-ramp-coreload-5 = %{F#d50000}▆
+ramp-coreload-5 = %{F#FF6F00}▆
 ramp-coreload-6 = %{F#d50000}▇
 ramp-coreload-7 = %{F#d50000}█
 
@@ -223,19 +223,7 @@ format-connected-underline = ${colors.primary}
 label-connected = %{A:networkmanager_dmenu:}%essid%%{A}
 
 format-disconnected = <label-disconnected>
-label-disconnected = %{A:networkmanager_dmenu:}kein Netzwerk%{A}
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
-ramp-signal-0 = 
-ramp-signal-1 =  
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-icon}
-
+label-disconnected = %{A:networkmanager_dmenu:}No Connection%{A}
 [module/date]
 type = internal/date
 interval = 5
@@ -257,7 +245,6 @@ type = internal/volume
 
 format-volume =  <bar-volume>
 label-volume = ""
-format-volume-underline = 
 label-volume-foreground = ${colors.foreground-icon}
 
 format-muted-prefix = " "

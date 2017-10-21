@@ -285,7 +285,9 @@ format-full-prefix-foreground = ${colors.bottom}
 format-full-underline = ${colors.bottom}
 
 ramp-capacity-0 = 
+ramp-capacity-0-foreground = #d50000
 ramp-capacity-1 = 
+ramp-capacity-1-foreground = #FF6F00
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 

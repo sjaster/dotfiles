@@ -1,8 +1,16 @@
 #!/usr/bin/python
 
 import imaplib
+from subprocess import check_output
+
+# Get user data from pass manager 
+userdata = check_output('pass mail/tud', shell=True)
+passwd = str(userdata.splitlines()[0], 'utf-8')
+user = str(userdata.splitlines()[1], 'utf-8').split(':')[1]
+
+# connent to imap server
 obj = imaplib.IMAP4('msx.tu-dresden.de',143)
 obj.starttls()
-obj.login('user','pass') # write your email and password
+obj.login(user,passwd)
 obj.select()
 print(len(obj.search(None, 'UnSeen')[1][0].split()))

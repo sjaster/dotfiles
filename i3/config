@@ -35,9 +35,10 @@ set $left j
 set $right 47
 
 #Client Color
-client.focused #000065 #000065 #000065 #000065 #000065
-client.focused_inactive #000000 #000000 #000000 #000000 #000000
-client.unfocused #000000 #000000 #000000 #000000 #000000
+# class			border  backgr	text	indic	child_border
+client.focused_inactive #455a64 #455a64 #455a64 #455a64
+client.focused		#607d8b #607d8b #607d8b #607d8b
+client.unfocused	#000000 #000000 #000000 #000000 
 
 #i3-Gaps
 for_window [class="^.*"] border pixel 2

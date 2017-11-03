@@ -40,7 +40,7 @@ client.unfocused	#000000 #000000 #000000 #000000
 # specific config
 for_window [class="^.*"] border pixel 2
 for_window [class="albert"] border pixel 0
-for_window [class="pinentry"] floating enable
+for_window [class="Pinentry"] floating enable
 
 # i3-Gaps
 gaps outer 5

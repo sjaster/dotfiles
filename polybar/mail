@@ -32,7 +32,10 @@ class TUD:
 def main():
     fsr = FSR()
     tud = TUD()
-    print('  FSR ' + fsr.getUnseen() + '    TUD ' + tud.getUnseen())
+    if fsr.getUnseen() == '0' and tud.getUnseen() == '0':
+        print('')
+    else:
+        print('  FSR ' + fsr.getUnseen() + '    TUD ' + tud.getUnseen())
 
 if __name__ == '__main__':
     main()

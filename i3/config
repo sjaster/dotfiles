@@ -37,9 +37,12 @@ client.focused_inactive #455a64 #455a64 #455a64 #455a64
 client.focused		#607d8b #607d8b #607d8b #607d8b
 client.unfocused	#000000 #000000 #000000 #000000 
 
-#i3-Gaps
+# specific config
 for_window [class="^.*"] border pixel 2
 for_window [class="albert"] border pixel 0
+for_window [class="pinentry"] floating enable
+
+# i3-Gaps
 gaps outer 5
 gaps inner 15
 smart_borders on 

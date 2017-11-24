@@ -134,6 +134,8 @@ bindsym Mod4+Shift+0 move container to workspace 10
 
 # start rofi in run mode
 bindsym Mod4+d exec "rofi -show run"
+# start pass clip in rofi
+bindsym Mod4+shift+d exec "pass clip -r"
 # reload the configuration file
 bindsym Mod4+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)

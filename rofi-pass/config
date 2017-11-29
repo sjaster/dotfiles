@@ -7,6 +7,9 @@ layout_cmd () {
 # and set fix_layout to true
 fix_layout=true
 
+#Default open option on password
+default_do='menu' # menu, autotype, copyPass, typeUser, typePass, copyUser, copyUrl, viewEntry, typeMenu, actionMenu, copyMenu, openUrl
+notify=true
 
 # fields to be used
 URL_field='url'
@@ -20,7 +23,7 @@ delay=2
 wait=0.2
 
 # Browser
-BROWSER='chromium'
+BROWSER='firefox"
 
 # Clipboard settings
 # Possible options: primary, clipboard, both

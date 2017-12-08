@@ -2,6 +2,7 @@
 
 import imaplib
 from subprocess import check_output
+from socket import gaierror
 
 class FSR:
     def __init__(self):
@@ -10,7 +11,10 @@ class FSR:
         self.user = str(userdata.splitlines()[1], 'utf-8').split(':')[1]
 
     def getUnseen(self):
-        obj = imaplib.IMAP4('imap.ifsr.de', 143)
+        try:
+            obj = imaplib.IMAP4('imap.ifsr.de', 143)
+        except gaierror:
+            return '0'
         obj.starttls()
         obj.login(self.user, self.passwd)
         obj.select()
@@ -23,7 +27,10 @@ class TUD:
         self.user = str(userdata.splitlines()[1], 'utf-8').split(':')[1]
 
     def getUnseen(self):
-        obj = imaplib.IMAP4('msx.tu-dresden.de', 143)
+        try:
+            obj = imaplib.IMAP4('msx.tu-dresden.de', 143)
+        except gaierror:
+            return '0'
         obj.starttls()
         obj.login(self.user, self.passwd)
         obj.select()

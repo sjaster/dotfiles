@@ -7,42 +7,46 @@ from socket import gaierror
 class FSR:
     def __init__(self):
         userdata = check_output('pass mail/fsr', shell=True)
-        self.passwd = str(userdata.splitlines()[0], 'utf-8')
-        self.user = str(userdata.splitlines()[1], 'utf-8').split(':')[1]
-
-    def getUnseen(self):
-        try:
-            obj = imaplib.IMAP4('imap.ifsr.de', 143)
-        except gaierror:
-            return '0'
-        obj.starttls()
-        obj.login(self.user, self.passwd)
-        obj.select()
-        return str(len(obj.search(None, 'UnSeen')[1][0].split()))
+        passwd = str(userdata.splitlines()[0], 'utf-8')
+        user = str(userdata.splitlines()[1], 'utf-8').split(':')[1]
+        server = 'imap.ifsr.de'
+        self.account = [server,user,passwd]
 
 class TUD:
     def __init__(self):
         userdata = check_output('pass mail/tud', shell=True)
-        self.passwd = str(userdata.splitlines()[0], 'utf-8')
-        self.user = str(userdata.splitlines()[1], 'utf-8').split(':')[1]
+        passwd = str(userdata.splitlines()[0], 'utf-8')
+        user = str(userdata.splitlines()[1], 'utf-8').split(':')[1]
+        server = 'msx.tu-dresden.de' 
+        self.account = [server, user, passwd] 
 
-    def getUnseen(self):
+class Mail:
+    def getAll(self):
+        fsr = FSR()
+        tud = TUD()
+        return [self.getUnseen(fsr.account), self.getUnseen(tud.account)]
+
+    def getUnseen(self, account): 
         try:
-            obj = imaplib.IMAP4('msx.tu-dresden.de', 143)
+            obj = imaplib.IMAP4(account[0], 143)
         except gaierror:
-            return '0'
+            return 'Timeout'
         obj.starttls()
-        obj.login(self.user, self.passwd)
+        obj.login(account[1], account[2])
         obj.select()
         return str(len(obj.search(None, 'UnSeen')[1][0].split()))
 
 def main():
-    fsr = FSR()
-    tud = TUD()
-    if fsr.getUnseen() == '0' and tud.getUnseen() == '0':
+    mail = Mail()
+    cur = mail.getAll()
+    if cur[0] == '0' and cur[1] == '0':
         print('')
+    elif cur[0] == 'Timeout':
+        print('  Timeout' + '    TUD ' + cur[1])
+    elif cur[1] == 'Timeout':
+        print('  FSR ' + cur[0] + '   Timeout')
     else:
-        print('  FSR ' + fsr.getUnseen() + '    TUD ' + tud.getUnseen())
+        print('  FSR ' + cur[0] + '    TUD ' + cur[1])
 
 if __name__ == '__main__':
     main()

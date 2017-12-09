@@ -1,35 +1,33 @@
-;=====================================================
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/jaagr/polybar
-;
-;   The README contains alot of information
-;
-;=====================================================
-
 [colors]
-background = #00000000
+background = #1d1f21
 background-alt = #444
 foreground = #dfdfdf
 foreground-alt = #7a7a7a
 foreground-icon = #ffffff
-primary = #2196F3
-secondary = #e60053
-bottom = #76FF03
-alert = #bd2c40
-accent = #cfb017
+primary = #00BCD4
+accent = #4DB6AC
+suggestion = #009688
+destruction = #FF5252
 
 [bar/top]
+monitor= eDP1
+
+font-0 = FontAwesome:pixelsize=10;1
+font-1 = Robot:pixelsize=10;1
+
+modules-left = i3 backlight volume
+modules-center = xwindow 
+modules-right = xkeyboard pkg mail wlan battery date
+
 width = 100%
-height = 24
+height = 20
 radius = 0
 fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
-line-color = #f00
+line-size = 1
 
 border-size = 4
 border-color = ${colors.background}
@@ -37,43 +35,14 @@ border-color = ${colors.background}
 padding-left = 0
 padding-right = 2
 
-module-margin-left = 1
+module-margin-left = 2
 module-margin-right = 2
-
-font-0 = FontAwesome:pixelsize=10;1
-font-1 = Robot:pixelsize=10;1
-
-modules-left = i3 backlight volume 
-modules-center = xwindow 
-modules-right = xkeyboard pkg mail mailtu wlan battery date
 
 tray-position = right
 tray-padding = 2
 
 [bar/bottom]
-;monitor = eDP1
-width = 100%
-height = 16
-;offset-x = 1%
-;offset-y = 1%
-radius = 0
-fixed-center = false
-bottom = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 3
-line-color = #f00
-
-border-size = 4
-border-color = ${colors.background}
-
-padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 2
+monitor = eDP1
 
 font-0 = FontAwesome:pixelsize=8;1
 font-1 = Robot:pixelsize=8;1
@@ -81,6 +50,24 @@ font-1 = Robot:pixelsize=8;1
 modules-left = filesystem 
 modules-center =
 modules-right = cpu memory
+
+width = 100%
+height = 16
+radius = 0
+fixed-center = false
+bottom = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+border-size = 5
+border-color = ${colors.background}
+
+padding-left = 2
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
 
 tray-position = right
 tray-padding = 2
@@ -107,28 +94,9 @@ interval = 25
 mount-0 = /
 mount-1 = /home
 
-label-mounted = %{F#76FF03}%mountpoint%: %{F-}%used%
+label-mounted = %{F#4DB6AC}%mountpoint%: %{F-}%used%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
-
-[module/bspwm]
-type = internal/bspwm
-
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
-
-label-occupied = %index%
-label-occupied-padding = 2
-
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
 
 [module/i3]
 type = internal/i3
@@ -136,22 +104,18 @@ format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
 
-; Only show workspaces on the same output as the bar
-;pin-workspaces = true
-
 label-mode-padding = 2
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 
-; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-underline = ${module/bspwm.label-focused-underline}
-label-focused-padding = ${module/bspwm.label-focused-padding}
+label-focused-background = ${colors.background-alt}
+label-focused-underline= ${colors.primary}
+label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
-label-unfocused-padding = ${module/bspwm.label-occupied-padding}
+label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
@@ -161,8 +125,8 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-background = ${module/bspwm.label-urgent-background}
-label-urgent-padding = ${module/bspwm.label-urgent-padding}
+label-urgent-background = ${colors.destruction}
+label-urgent-padding = 2
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -190,14 +154,14 @@ type = internal/cpu
 interval = 0.5
 format = <ramp-coreload>
 
-ramp-coreload-0 = %{F#76FF03}▁
-ramp-coreload-1 = %{F#76FF03}▂
-ramp-coreload-2 = %{F#76FF03}▃
-ramp-coreload-3 = %{F#FF6F00}▄
-ramp-coreload-4 = %{F#FF6F00}▅
-ramp-coreload-5 = %{F#FF6F00}▆
-ramp-coreload-6 = %{F#d50000}▇
-ramp-coreload-7 = %{F#d50000}█
+ramp-coreload-0 = %{F#4DB6AC}▁
+ramp-coreload-1 = %{F#4DB6AC}▂
+ramp-coreload-2 = %{F#4DB6AC}▃
+ramp-coreload-3 = %{F#009688}▄
+ramp-coreload-4 = %{F#009688}▅
+ramp-coreload-5 = %{F#009688}▆
+ramp-coreload-6 = %{F#FF5252}▇
+ramp-coreload-7 = %{F#FF5252}█
 
 [module/memory]
 type = internal/memory
@@ -208,10 +172,10 @@ bar-used-indicator = |
 bar-used-indicator-font = 2
 bar-used-width = 25
 bar-used-gradient = false
-bar-used-foreground-0 = ${colors.bottom}
-bar-used-foreground-1 = ${colors.bottom}
-bar-used-foreground-2 = #FF6F00
-bar-used-foreground-3 = #d50000
+bar-used-foreground-0 = ${colors.accent}
+bar-used-foreground-1 = ${colors.accent}
+bar-used-foreground-2 = $(colors.suggestion)
+bar-used-foreground-3 = ${colors.destruction}
 bar-used-fill = ─
 bar-used-fill-font = 2
 bar-used-empty = ─
@@ -229,6 +193,7 @@ label-connected = %{A:networkmanager_dmenu:}%essid%%{A}
 
 format-disconnected = <label-disconnected>
 label-disconnected = %{A:networkmanager_dmenu:}No Connection%{A}
+
 [module/date]
 type = internal/date
 interval = 5
@@ -263,7 +228,7 @@ bar-volume-indicator = |
 bar-volume-indicator-font = 2
 bar-volume-fill = ─
 bar-volume-fill-font = 2
-bar-volume-fill-foreground = ${colors.bottom}
+bar-volume-fill-foreground = ${colors.accent}
 bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
@@ -281,13 +246,13 @@ format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${colors.primary}
 
 format-full-prefix = " "
-format-full-prefix-foreground = ${colors.bottom}
-format-full-underline = ${colors.bottom}
+format-full-prefix-foreground = ${colors.accent}
+format-full-underline = ${colors.accent}
 
 ramp-capacity-0 = 
-ramp-capacity-0-foreground = #d50000
+ramp-capacity-0-foreground = ${colors.destruction}
 ramp-capacity-1 = 
-ramp-capacity-1-foreground = #FF6F00
+ramp-capacity-1-foreground = #FFAB40
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
@@ -317,13 +282,8 @@ exec = .config/polybar/mail
 
 [settings]
 screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
 
 [global/wm]
 margin-top = 5
 margin-bottom = 5
 
-; vim:ft=dosini

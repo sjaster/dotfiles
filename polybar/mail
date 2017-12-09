@@ -39,12 +39,14 @@ class Mail:
 def main():
     mail = Mail()
     cur = mail.getAll()
-    if cur[0] == '0' and cur[1] == '0':
+    if (cur[0] and cur[1]) == '0':
         print('')
-    elif cur[0] == 'Timeout':
+    elif cur[0] == 'Timeout' and cur[1] != 'Timeout':
         print('  Timeout' + '    TUD ' + cur[1])
-    elif cur[1] == 'Timeout':
-        print('  FSR ' + cur[0] + '   Timeout')
+    elif cur[1] == 'Timeout' and cur[0] != 'Timeout':
+        print('  FSR ' + cur[0] + '    Timeout')
+    elif (cur[0] and cur[1]) == 'Timeout':
+        print('  Timeout')
     else:
         print('  FSR ' + cur[0] + '    TUD ' + cur[1])
 

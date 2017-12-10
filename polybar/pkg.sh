@@ -5,7 +5,7 @@ cower=$(cower -u | wc -l)
 
 if [[ $cower != $aur ]]
 then
-    aur=cower
+    aur=$cower
 fi
 
 check=$((pac + aur))

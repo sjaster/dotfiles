@@ -1,12 +1,6 @@
 #!/bin/bash
 pac=$(checkupdates | wc -l)
-aur=$(pacaur -u | wc -l)
-cower=$(cower -u | wc -l)
-
-if [[ $cower != $aur ]]
-then
-    aur=$cower
-fi
+aur=$(cower -u | wc -l)
 
 check=$((pac + aur))
 if [[ "$check" != "0" ]]

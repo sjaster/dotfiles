@@ -6,10 +6,10 @@
 
 # ratio for rectangle to be drawn for time background on lockscreen
 # Original Image
-orig_wall=$HOME/.wall.png
+orig_wall=$HOME/.dotfiles/wallpapers/tealized.jpg
 
 # create folder in /tmp directory
-folder="/tmp/lock"
+folder="$HOME/.cache/i3lock"
 
 # Versions (from here)
 # You can use these images to set different versions as wallpaper
@@ -119,15 +119,6 @@ case "$1" in
 		echo "              Ex: ./lock.sh -l blur (for blurred background)"
 		echo "              Ex: ./lock.sh -l dimblur (for dimmed + blurred background)"
 		echo
-		echo
-		echo "          -w --wall"
-		echo "              you can also set lockscreen background as wallpaper"
-		echo "              to set wallpaper. Ex ./lock.sh -w or ./lock.sh --wall"
-		echo "              you can also use dimmed or blurred variants"
-		echo "              Ex: ./lock.sh -w dim (for dimmed wallpaper)"
-		echo "              Ex: ./lock.sh -w blur (for blurred wallpaper)"
-		echo "              Ex: ./lock.sh -w dimblur (for dimmed + blurred wallpaper)"
-		echo
 		;;
 
 	-l | --lock)
@@ -161,31 +152,6 @@ case "$1" in
 				postlock
 				;;
 		esac
-		;;
-
-	-w | --wall)
-		case "$2" in
-			"")
-				# set resized image as wallpaper if no argument is supplied by user
-				feh --bg-fill $resized
-				;;
-
-			dim)
-				# set dimmed image as wallpaper
-				feh --bg-fill $dim
-				;;
-
-			blur)
-				# set blurred image as wallpaper
-				feh --bg-fill $blur
-				;;
-
-			dimblur)
-				# set dimmed + blurred image as wallpaper
-				feh --bg-fill $dimblur
-				;;
-		esac
-
 		;;
 
 	-u | --update)

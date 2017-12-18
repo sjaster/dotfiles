@@ -112,6 +112,8 @@ bindsym Mod4+Shift+0 move container to workspace 10
 bindsym Mod4+d exec "rofi -show run"
 # start rofi-pass 
 bindsym Mod4+shift+d exec "rofi-pass"
+# show all windows
+bindsym Mod4+Tab exec "rofi -show window"
 # reload the configuration file
 bindsym Mod4+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)

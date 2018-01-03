@@ -93,12 +93,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 #Command Aliases
-alias vmup="cd ~/scotchbox && vagrant up --provision"
-alias vmhalt="cd ~/scotchbox && vagrant halt"
-alias vmssh="cd ~/scotchbox && vagrant ssh"
-alias elkup="cd ~/elkstack && vagrant up --provision"
-alias elkhalt="cd ~/elkstack && vagrant halt"
-alias elkssh="cd ~/elkstack && vagrant ssh"
+alias vmup="cd ~/scotch-box && vagrant up --provision"
+alias vmhalt="cd ~/scotch-box && vagrant halt"
+alias vmssh="cd ~/scotch-box && vagrant ssh"
 
 alias calculator="python3 -i -c 'from math import *'"
 

@@ -211,7 +211,7 @@ format-underline = ${colors.primary}
 label = %date% %time%
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 
 format-volume =  <bar-volume>
 label-volume = ""

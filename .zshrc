@@ -103,7 +103,6 @@ alias intellij="/opt/IntelliJ/bin/idea.sh &"
 alias netctl-re="systemctl restart netctl-auto@wlp3s0.service"
 
 alias de="setxkbmap -layout de"
-alias exorcism="pacaur -Syyu"
 alias internetz="ping 8.8.8.8"
 
 alias fin="cd ~/fsr/finanzen/finanzgit"

@@ -33,7 +33,7 @@ bindsym Mod4+Return exec termite
 bindsym Mod4+Shift+q kill
 
 #Start screen locker
-bindsym Mod4+q exec ~/.config/i3/lock.sh --lock
+bindsym Mod4+q exec betterlockscreen -l
 # Launch script for polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Disable screensaver

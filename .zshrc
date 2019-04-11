@@ -100,7 +100,6 @@ alias vmssh="cd ~/scotch-box && vagrant ssh"
 alias calculator="python3 -i -c 'from math import *'"
 
 alias intellij="/opt/IntelliJ/bin/idea.sh &"
-alias netctl-re="systemctl restart netctl-auto@wlp3s0.service"
 
 alias de="setxkbmap -layout de"
 alias internetz="ping 8.8.8.8"
@@ -108,8 +107,8 @@ alias internetz="ping 8.8.8.8"
 alias fin="cd ~/fsr/finanzen/finanzgit"
 alias finanz="libreoffice ~/fsr/finanzen/finanzgit/fsr-finanzen-neu.ods"
 alias dot="cd /home/sjaster/.dotfiles"
-alias mntStura="sshfs stura:/media/STURA/stura ~/stura/sturaMount/"
-alias umntStura="fusermount -u ~/stura/sturaMount/"
+
+alias stunden="libreoffice ~/esemos/Stunden/stunden.ods"
 
 alias sm="sm -i"
 

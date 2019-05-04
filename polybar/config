@@ -10,7 +10,7 @@ suggestion = #009688
 destruction = #FF5252
 
 [bar/top]
-monitor= eDP1
+monitor = ${env:MONITOR:}
 
 font-0 = FontAwesome:pixelsize=10;1
 font-1 = Robot:pixelsize=10;1
@@ -42,7 +42,7 @@ tray-position = right
 tray-padding = 2
 
 [bar/bottom]
-monitor = eDP1
+monitor = ${env:MONITOR:}
 
 font-0 = FontAwesome:pixelsize=8;1
 font-1 = Robot:pixelsize=8;1

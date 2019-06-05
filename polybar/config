@@ -17,7 +17,7 @@ font-1 = Robot:pixelsize=10;1
 
 modules-left = i3 backlight volume
 modules-center = xwindow 
-modules-right = xkeyboard pkg mail wlan battery date
+modules-right = xkeyboard pkg wlan battery date
 
 width = 100%
 height = 20

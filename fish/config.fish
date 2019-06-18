@@ -19,6 +19,8 @@ alias internetz="ping 8.8.8.8"
 
 alias fin="cd ~/fsr/finanzen/finanzgit"
 alias finanz="libreoffice ~/fsr/finanzen/finanzgit/fsr-finanzen-neu.ods"
+alias kiffin="cd ~/fsr/kif/470/buchhaltung"
+alias kif="cd ~/fsr/kif/470"
 alias dot="cd /home/sjaster/.dotfiles"
 
 alias stunden="libreoffice ~/esemos/Stunden/stunden.ods"

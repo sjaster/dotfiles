@@ -6,7 +6,7 @@ SETUVAR __fish_init_3_x:\x1d
 SETUVAR fish_color_autosuggestion:878787
 SETUVAR fish_color_cancel:normal
 SETUVAR fish_color_command:00e676
-SETUVAR fish_color_comment:8a8a8a
+SETUVAR fish_color_comment:00e676
 SETUVAR fish_color_cwd:00BCD4
 SETUVAR fish_color_cwd_root:800000
 SETUVAR fish_color_end:00ff5f

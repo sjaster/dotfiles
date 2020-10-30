@@ -1,0 +1,4 @@
+setxkbmap -layout de
+feh --bg-scale /home/sjaster/.config/wallpaper/tealized.jpg
+compton -b
+

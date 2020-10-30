@@ -5,11 +5,10 @@ if status is-login
     end
 end
 
-#Command Aliases
-alias vmup="cd ~/scotch-box && vagrant up --provision"
-alias vmhalt="cd ~/scotch-box && vagrant halt"
-alias vmssh="cd ~/scotch-box && vagrant ssh"
+#Add rust bin to path
+export PATH="$HOME/.cargo/bin:$PATH"
 
+#Command Aliases
 alias calculator="python3 -i -c 'from math import *'"
 
 alias intellij="/opt/IntelliJ/bin/idea.sh &"
@@ -17,16 +16,12 @@ alias intellij="/opt/IntelliJ/bin/idea.sh &"
 alias de="setxkbmap -layout de"
 alias internetz="ping 8.8.8.8"
 
-alias fin="cd ~/fsr/finanzen/finanzgit"
-alias finanz="libreoffice ~/fsr/finanzen/finanzgit/fsr-finanzen-neu.ods"
-alias kiffin="cd ~/fsr/kif/470/buchhaltung"
-alias kif="cd ~/fsr/kif/470"
 alias dot="cd /home/sjaster/.dotfiles"
-
-alias stunden="libreoffice ~/esemos/Stunden/stunden.ods"
 
 alias sm="sm -i"
 
 alias gl="git pull"
 alias gp="git push"
 alias gst="git status"
+
+alias sv="sudoedit"

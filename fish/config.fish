@@ -25,3 +25,5 @@ alias gp="git push"
 alias gst="git status"
 
 alias sv="sudoedit"
+
+alias swp="cd /home/sjaster/uni/swp"

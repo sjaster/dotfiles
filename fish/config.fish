@@ -27,3 +27,4 @@ alias gst="git status"
 alias sv="sudoedit"
 
 alias swp="cd /home/sjaster/uni/swp"
+alias codeswp="swp && code ."

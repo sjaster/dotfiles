@@ -4,10 +4,9 @@ background-alt = #444
 foreground = #dfdfdf
 foreground-alt = #7a7a7a
 foreground-icon = #ffffff
-primary = #00BCD4
-accent = #4DB6AC
+primary = #d50000
+accent = #d50000
 suggestion = #009688
-destruction = #FF5252
 
 [bar/top]
 monitor = ${env:MONITOR:}
@@ -94,7 +93,7 @@ interval = 25
 mount-0 = /
 mount-1 = /home
 
-label-mounted = %{F#4DB6AC}%mountpoint%: %{F-}%used%
+label-mounted = %{F#d50000}%mountpoint%: %{F-}%used%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -154,14 +153,14 @@ type = internal/cpu
 interval = 0.5
 format = <ramp-coreload>
 
-ramp-coreload-0 = %{F#4DB6AC}▁
-ramp-coreload-1 = %{F#4DB6AC}▂
-ramp-coreload-2 = %{F#4DB6AC}▃
-ramp-coreload-3 = %{F#009688}▄
-ramp-coreload-4 = %{F#009688}▅
-ramp-coreload-5 = %{F#009688}▆
-ramp-coreload-6 = %{F#FF5252}▇
-ramp-coreload-7 = %{F#FF5252}█
+ramp-coreload-0 = %{F#64b5f6}▁
+ramp-coreload-1 = %{F#64b5f6}▂
+ramp-coreload-2 = %{F#64b5f6}▃
+ramp-coreload-3 = %{F#f9a825}▄
+ramp-coreload-4 = %{F#f9a825}▅
+ramp-coreload-5 = %{F#f9a825}▆
+ramp-coreload-6 = %{F#d50000}▇
+ramp-coreload-7 = %{F#d50000}█
 
 [module/memory]
 type = internal/memory
@@ -171,9 +170,9 @@ format = <bar-used>
 bar-used-indicator = |
 bar-used-indicator-font = 2
 bar-used-width = 25
-bar-used-gradient = false
-bar-used-foreground-0 = ${colors.accent}
-bar-used-foreground-1 = ${colors.accent}
+bar-used-gradient = true
+bar-used-foreground-0 = $(colors.accent)
+bar-used-foreground-1 = $(colors.accent)
 bar-used-foreground-2 = $(colors.accent)
 bar-used-foreground-3 = ${colors.accent}
 bar-used-fill = ─
@@ -246,13 +245,13 @@ format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${colors.primary}
 
 format-full-prefix = " "
-format-full-prefix-foreground = ${colors.accent}
+format-full-prefix-foreground = #64b5f6
 format-full-underline = ${colors.accent}
 
 ramp-capacity-0 = 
-ramp-capacity-0-foreground = ${colors.destruction}
+ramp-capacity-0-foreground = #D50000
 ramp-capacity-1 = 
-ramp-capacity-1-foreground = #FFAB40
+ramp-capacity-1-foreground = #F9A825
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 

@@ -13,6 +13,7 @@ monitor = ${env:MONITOR:}
 
 font-0 = FontAwesome:pixelsize=10;1
 font-1 = Robot:pixelsize=10;1
+font-2 = DejaVuSans:pixelsize=10;1
 
 modules-left = i3 backlight volume
 modules-center = xwindow 
@@ -45,6 +46,7 @@ monitor = ${env:MONITOR:}
 
 font-0 = FontAwesome:pixelsize=8;1
 font-1 = Robot:pixelsize=8;1
+font-2 = DejaVuSans:pixelsize=8;1
 
 modules-left = filesystem 
 modules-center =

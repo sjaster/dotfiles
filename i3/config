@@ -27,7 +27,7 @@ smart_borders on
 floating_modifier Mod4
 
 # start termite
-bindsym Mod4+Return exec termite
+bindsym Mod4+Return exec alacritty
 
 # kill focused window
 bindsym Mod4+Shift+q kill

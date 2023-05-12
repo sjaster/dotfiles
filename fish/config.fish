@@ -12,6 +12,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 alias calculator="python3 -i -c 'from math import *'"
 
 alias intellij="/opt/IntelliJ/bin/idea.sh &"
+alias zotero="/opt/Zotero/zotero &"
 
 alias de="setxkbmap -layout de"
 alias internetz="ping 8.8.8.8"

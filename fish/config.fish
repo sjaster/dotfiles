@@ -6,7 +6,7 @@ if status is-login
 end
 
 #Add rust bin to path
-export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:/opt/omnetpp-5.2.1/bin:$PATH"
 
 #Command Aliases
 alias calculator="python3 -i -c 'from math import *'"

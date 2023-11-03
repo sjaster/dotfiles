@@ -159,3 +159,6 @@ bindsym XF86MonBrightnessDown exec --no-startup-id light -U 2 # decrease screen 
 
 # Touchpad controls
 bindsym XF86TouchpadToggle exec $HOME/.config/i3/toggletouchpad.sh # toggle touchpad
+
+# Flameshot (Snipping Tool)
+bindsym Mod4+Shift+s exec "flameshot gui"

@@ -30,3 +30,6 @@ alias sv="sudoedit"
 alias swp="cd /home/sjaster/uni/swp"
 alias codeswp="swp && code ."
 alias ncsim="cd /home/sjaster/uni/shk/network_coding"
+
+# Created by `pipx` on 2023-12-01 12:38:14
+set PATH $PATH /home/sjaster/.local/bin

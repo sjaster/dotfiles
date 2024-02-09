@@ -39,7 +39,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # Disable screensaver
 exec_always --no-startup-id $HOME/.config/i3/noscreensave.sh
 # Shortcut for sleep mode; for accesibility when using externmal monitors
-bindsym Mod4+Ctrl+s exec betterlockscreen -l && exec systemctl suspend
+bindsym Mod4+Ctrl+s exec betterlockscreen -l & sleep 0.5 && systemctl suspend
 
 # change focus
 bindsym Mod4+$left focus left

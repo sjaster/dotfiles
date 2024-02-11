@@ -113,7 +113,8 @@ bindsym Mod4+Shift+0 move container to workspace 10
 # start rofi in run mode
 bindsym Mod4+d exec "rofi -show run"
 # start rofi-pass 
-bindsym Mod4+shift+d exec "rofi-pass"
+#bindsym Mod4+shift+d exec "rofi-pass"
+bindsym Mod4+shift+d exec "keepmenu -d ~/.keepass/Passwords.kdbx -c ~/.dotfiles/keepmenu/config.ini -C"
 # show all windows
 bindsym Mod4+Tab exec "rofi -show window"
 # reload the configuration file

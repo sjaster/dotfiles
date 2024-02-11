@@ -1,0 +1,121 @@
+/*******************************************************************************
+ * ROFI Color theme based on Material Color Palette
+ * User: sjaster
+ * Copyright: Sebastian Jaster
+ *******************************************************************************/
+ 
+/* Definitions */
+* {  
+    /* Colors */
+    teal-500:                    #009688;
+    teal-200:                    #80cbc4;
+    blue-grey-700:               #455A64;
+    grey-300:                    #e0e0e0;
+    white:                       #ffffff;
+    black:                       #1d1f21;
+
+    /* Foreground Definitions */
+    foreground:                  @grey-300;
+    active-foreground:           @teal-200;
+    selected-normal-foreground:  @white;
+
+    /* Background Definitions */
+    background:                  @black;
+    active-background:           @blue-grey-700;
+    background-color:            @background;
+
+    selected-normal-background:  @teal-500;
+
+    /* Other Definitions */
+    border-color:                @blue-grey-700;
+}
+
+/* Setting for standard elements */
+#window {
+    background-color: @background;
+    border:           1;
+    padding:          10;
+}
+#mainbox {
+    border:  0;
+}
+#message {
+    border-color: @border-color;
+    padding:      1;
+}
+#textbox {
+    text-color: @foreground;
+}
+#listview {
+    fixed-height: 0;
+    border:       2 0 0 0;
+    border-color: @border-color;
+    spacing:      5;
+    scrollbar:    false;
+    padding:      5 2 0 2;
+}
+#element {
+    border:  0;
+    padding: 2 0 2 0;
+}
+#scrollbar {
+    width:        4;
+    border:       0;
+    handle-width: 8;
+    padding:      0;
+}
+#sidebar {
+    border:       2 dash 0 0;
+    border-color: @border-color;
+}
+#button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+#inputbar {
+    spacing:    2;
+    text-color: @foreground;
+    padding:    0 0 5 0;
+}
+#case-indicator {
+    spacing:    0;
+    text-color: @foreground;
+}
+#entry {
+    spacing:    0;
+    text-color: @foreground;
+}
+#prompt {
+    spacing:    0;
+    text-color: @foreground;
+}
+
+/* Settings for normal entries */
+#element.normal.normal {
+    background-color: @background;
+    text-color:       @foreground;
+}
+#element.normal.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+
+/* Settings for selected entries */
+#element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+#element.selected.active {
+    background-color: @active-background;
+    text-color:       @active-foreground;
+}
+
+/* Settings for alternate entries */
+#element.alternate.normal {
+    background-color: @background;
+    text-color:       @foreground;
+}
+#element.alternate.active {
+    background-color: @active-background;
+    text-color:       @foreground;
+}

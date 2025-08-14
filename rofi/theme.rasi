@@ -15,7 +15,7 @@
     black:                       #1d1f21;
 
     /* Foreground Definitions */
-    foreground:                  @grey-300;
+    foreground:                  @white;
     active-foreground:           @teal-200;
     selected-normal-foreground:  @white;
 
@@ -83,7 +83,7 @@
 }
 #entry {
     spacing:    0;
-    text-color: @foreground;
+    text-color: @white;
 }
 #prompt {
     spacing:    0;
@@ -93,7 +93,7 @@
 /* Settings for normal entries */
 #element.normal.normal {
     background-color: @background;
-    text-color:       @foreground;
+    text-color:       @white;
 }
 #element.normal.active {
     background-color: @active-background;

@@ -164,3 +164,7 @@ bindsym XF86TouchpadToggle exec $HOME/.config/i3/toggletouchpad.sh # toggle touc
 
 # Flameshot (Snipping Tool)
 bindsym Mod4+Shift+s exec "flameshot gui"
+
+# xrandr keybinds
+bindsym Mod4+Ctrl+d exec $HOME/.screenlayout/connect_dockingstation.sh
+bindsym Mod4+Ctrl+n exec $HOME/.screenlayout/normal.sh

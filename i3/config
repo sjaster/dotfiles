@@ -166,5 +166,5 @@ bindsym XF86TouchpadToggle exec $HOME/.config/i3/toggletouchpad.sh # toggle touc
 bindsym Mod4+Shift+s exec "flameshot gui"
 
 # xrandr keybinds
-bindsym Mod4+Ctrl+d exec $HOME/.screenlayout/connect_dockingstation.sh
-bindsym Mod4+Ctrl+n exec $HOME/.screenlayout/normal.sh
+bindsym Mod4+Ctrl+d exec "$HOME/.screenlayout/connect_dockingstation.sh && ln -s -f /home/sjaster/.dotfiles/alacritty/alacritty-dockingstation.toml /home/sjaster/.alacritty.toml"
+bindsym Mod4+Ctrl+n exec "$HOME/.screenlayout/normal.sh && ln -s -f /home/sjaster/.dotfiles/alacritty/alacritty.toml /home/sjaster/.alacritty.toml"

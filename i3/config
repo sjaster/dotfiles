@@ -165,6 +165,9 @@ bindsym XF86TouchpadToggle exec $HOME/.config/i3/toggletouchpad.sh # toggle touc
 # Flameshot (Snipping Tool)
 bindsym Mod4+Shift+s exec "flameshot gui"
 
-# xrandr keybinds
+# xrandr keybinds dockingstation
 bindsym Mod4+Ctrl+d exec "$HOME/.screenlayout/connect_dockingstation.sh && ln -s -f /home/sjaster/.dotfiles/alacritty/alacritty-dockingstation.toml /home/sjaster/.alacritty.toml"
 bindsym Mod4+Ctrl+n exec "$HOME/.screenlayout/normal.sh && ln -s -f /home/sjaster/.dotfiles/alacritty/alacritty.toml /home/sjaster/.alacritty.toml"
+
+# dockingstation mouse remapping
+bindsym Mod4+Shift+m exec "xinput set-button-map 15 1 2 3 4 5 6 7 0 0"

@@ -197,12 +197,12 @@ label-disconnected = %{A:networkmanager_dmenu:}No Connection%{A}
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
 date = %d.%m.%y
 date-alt = %d.%B %Y
 
-time = %H:%M
+time = %H:%M:%S
 time-alt = %H:%M:%S
 
 format-prefix =  
